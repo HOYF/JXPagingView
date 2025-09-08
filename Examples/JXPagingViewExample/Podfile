@@ -2,7 +2,7 @@ platform :ios, '8.0'
 
 use_frameworks!
 target 'JXPagingViewExample' do
-pod 'JXPagingView/Paging', :path => '../../../JXPagingView'
+pod 'JXPagingView/Paging'
 pod 'MJRefresh', '3.4.0'
 pod 'JXSegmentedView'
 end

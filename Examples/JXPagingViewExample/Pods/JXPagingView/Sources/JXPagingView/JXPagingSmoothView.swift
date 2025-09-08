@@ -71,7 +71,7 @@ open class JXPagingSmoothView: UIView {
     public init(dataSource: JXPagingSmoothViewDataSource) {
         self.dataSource = dataSource
         pagingHeaderContainerView = UIView()
-        let layout = JXRTLFlowLayout()
+        let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
@@ -106,7 +106,6 @@ open class JXPagingSmoothView: UIView {
         currentPagingHeaderContainerViewY = 0
         isSyncListContentOffsetEnabled = false
 
-        listHeaderDict.values.forEach { $0.removeFromSuperview() }
         listHeaderDict.removeAll()
         listDict.values.forEach { (list) in
             list.listScrollView().removeObserver(self, forKeyPath: "contentOffset")
